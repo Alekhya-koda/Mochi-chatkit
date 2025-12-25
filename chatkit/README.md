@@ -30,3 +30,11 @@ and set `VITE_CHATKIT_API_DOMAIN_KEY` when deploying.
 - Update UI and connection settings in `frontend/src/lib/config.ts`.
 - Adjust layout in `frontend/src/components/ChatKitPanel.tsx`.
 - Swap the in-memory store in `backend/app/server.py` for persistence.
+- Build a grounded knowledge base by ingesting your own sources:
+  ```bash
+  cd backend
+  OPENAI_API_KEY=... python -m app.scripts.ingest_knowledge
+  ```
+  This pulls the curated URLs in `app/scripts/ingest_knowledge.py`, writes embeddings to
+  `app/data/knowledge_base.jsonl`, and enables the `search_knowledge_base` tool the assistant uses
+  to cite sources. Pass `--source-file my_sources.txt` for your own newline-separated list.

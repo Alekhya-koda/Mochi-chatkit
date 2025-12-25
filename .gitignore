@@ -1,0 +1,5 @@
+.env
+chatkit/backend/app/data/*.pdf
+chatkit/backend/app/data/*.jsonl
+.venv/
+__pycache__/

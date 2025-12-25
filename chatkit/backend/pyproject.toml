@@ -8,6 +8,11 @@ dependencies = [
     "uvicorn[standard]>=0.36,<0.37",
     "openai>=1.40",
     "openai-chatkit>=1.4.0,<2",
+    "beautifulsoup4>=4.12,<5",
+    "numpy>=1.26,<2",
+    "pypdf>=4.3.1,<5",
+    "requests>=2.32,<3",
+    "tqdm>=4.66,<5",
 ]
 
 [project.optional-dependencies]
@@ -18,4 +23,3 @@ dev = [
 [build-system]
 requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
-
